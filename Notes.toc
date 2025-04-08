@@ -1,3 +1,0 @@
-\contentsline {section}{First Section}{1}{section*.2}%
-\contentsline {section}{Second Section}{1}{section*.3}%
-\contentsline {subsection}{Subsection}{2}{section*.4}%
