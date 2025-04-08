@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{dsfont}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    }
+
+
+\newlength{\tindent}
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\title{Title}
+\author{Author}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section*{First Section}
+\label{s:first}\addcontentsline{toc}{section}{First Section}
+
+\textbf{url:}\\
+\url{https://www.youtube.com}
+
+\textbf{Lists}\\
+\begin{enumerate}
+    \item List item 1
+    \item List item 2
+    \item List item 3
+\end{enumerate}
+\begin{itemize}
+    \item Bullet
+    \item[!] Exclam
+    \item[NOTE] No bullet within list
+    \item[] Blank list item
+\end{itemize}
+
+\section*{Second Section}
+\label{s:second}\addcontentsline{toc}{section}{Second Section}
+
+%Required - \hyperref[ss:transpile]{transpile}: abstracts the quantum circuit into a circuit that can run on target hardware\\
+Text - \textit{Link to first section}[\nameref{s:first}]
+Text - \textit{Link to future subsection}[\nameref{ss:subsection}]
+\\
+
+\textbf{Table}\\
+\begin{tabularx}{\textwidth}{ | >{\hsize=0.5\hsize}Y | Y | >{\hsize=0.5\hsize}Y | }
+    \hline
+    Heading1 & Heading2 & Heading3 \\
+    \hline
+    Text & Long text string that wraps to a new line automatically based on text width & Text text \\
+    \hline
+    Text & Long text string that wraps to a new line automatically based on text width & Text text \\
+    \hline
+    Text & Long text string that wraps to a new line automatically based on text width & Text text \\
+    \hline
+\end{tabularx}\\
+\\
+
+
+\subsection*{Subsection}
+\label{ss:subsection}\addcontentsline{toc}{subsection}{Subsection}
+
+\textbf{Code Block:}
+\begin{verbatim}
+Code goes here
+function(arg1, arg2):
+    do stuff
+    return thing
+\end{verbatim}
+
+
+\end{document}
