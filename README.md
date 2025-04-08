@@ -3,6 +3,6 @@ Provides unnumbered sections and subsections along with a linked table of conten
 Provides a tabularx table example\
 Code block that uses \"verbatim\"\
 url's\
-Lists\
+Lists
 * Numbered
 * Various list markings
