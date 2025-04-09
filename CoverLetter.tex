@@ -1,0 +1,34 @@
+%basic cover letter template
+\documentclass{letter}
+\usepackage{graphicx}
+\usepackage{lipsum}
+
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=5.9in
+\topmargin=-.5in
+\textheight=9in
+
+\begin{document}
+
+\begin{letter}
+    {Company Address Line 1\\
+     Company Address Line 2
+    }
+
+\opening{Dear Hiring Manager,}
+
+\lipsum[1-3]
+
+\closing{Sincerely,
+\includegraphics[width=6cm]{signature.png}
+}
+
+First Last\\
+Address Line 1\\
+Address Line 2\\
+(123) 456-7890 (cell)\\user@email.com
+
+\end{letter}
+
+\end{document}
